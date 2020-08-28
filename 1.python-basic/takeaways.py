@@ -40,11 +40,11 @@ li_y=[]
 for b in range(5):
     li.append(li_y.copy())
 
-# sorted() return newlist sort work in line.
+# sorted() return newlist sort work in line. abd key method in sort is useful, and BE CAREFULL lambda x: (must be a tuple)
 word_in=[]
 word_in.sort()
 word_out=sorted(word_in)
-
+word_out.sort(key=lambda x:(x[0],int(x[1]),int(x[2])))
 
 #yield can repeat, return only return once and stop
 
@@ -84,3 +84,13 @@ a.isdigit()
 a.islower()
 a.isupper()
 a.isnumerica()
+
+# one example of using map and use many variable to receive multi args output
+in_word=input().split(' ')
+x,y =map(str,in_word)
+
+
+#example of regular expression For password, A-Z a-z 0-9 include$#@
+import re
+
+ass_pattern = re.compile(r"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@]).{6,12}$")

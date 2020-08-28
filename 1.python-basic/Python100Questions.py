@@ -352,25 +352,287 @@ W 200
 D 100
 Then, the output should be:
 
-500'''
-while True:
-    command=input('enter').split(' ')
-    print(command)
-    sum_list=[]
+# 500'''
+# sum_list=[]
+# while True:
+#     command=input('enter').split(' ')
+#     print(command)
+#
+#     if command[0]=='D':
+#         sum_list.append(int(command[1]))
+#     if command[0]=='W':
+#         sum_list.append(-int(command[1]))
+#
+#     print(sum(sum_list))
 
-    if i=='D':
-        sum_list.append(int(command[i+1]))
-    if i=='W':
-        sum_list.append(int(-command[i+1]))
+# in_word=input().split(' ')
+# x,y =map(str,in_word)
+#
+# print(x+y)
+
+
+'''Question 18
+Question:
+A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+
+Following are the criteria for checking the password:
+
+At least 1 letter between [a-z]
+At least 1 number between [0-9]
+At least 1 letter between [A-Z]
+At least 1 character from [$#@]
+Minimum length of transaction password: 6
+Maximum length of transaction password: 12
+Your program should accept a sequence of comma separated passwords and will check them according to the above criteria.
+Passwords that match the criteria are to be printed, each separated by a comma.
+
+Example
+
+If the following passwords are given as input to the program:
+
+ABd1234@1,a F1#,2w3E*,2We3345
+Then, the output of the program should be:
+
+ABd1234@1'''
+
+# import re
+# while True:
+#     in_word=input('please enter password')
+#     pattern=re.compile(r'[A-Za-z0-9$#Q]')
+#     if re.match(pattern,in_word) and 12> len(in_word)>6:
+#         print(in_word)
+
+
+'''Question 19
+Question:
+You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, 
+age and score are numbers. The tuples are input by console. The sort criteria is:
+
+1: Sort based on name
+2: Then sort based on age
+3: Then sort by score
+The priority is that name > age > score.
+
+If the following tuples are given as input to the program:
+
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+Then, the output of the program should be:
+
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]'''
+
+# data_list = []
+# while True:
+#     data_in=tuple(input('Please enter Name, age and score').split(','))
+#     if len(data_list)!=0:
+#         data_list.append(data_in)
+#         data_list.sort(key=lambda x:(x[0],int(x[1]),int(x[2])))
+#
+#     else:
+#         data_list.append(data_in)
+#     print(data_list)
+
+
+
+'''Question 20
+Question:
+Define a class with a generator which can iterate the numbers, which are divisible by 7, between a given range 0 and n.
+
+Suppose the following input is supplied to the program:
+
+7
+Then, the output should be:
+
+0
+7
+14
+'''
+# class Divisable:
+#     @staticmethod
+#     def func1(num):
+#         for i in range(1,num+1):
+#             if num%i==0:
+#                 yield i
+#
+# for i in Divisable.func1(7):
+#     print(i)
+
+'''Question 21
+Question:
+A robot moves in a plane starting from the original point (0,0).
+ The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. 
+ The trace of robot movement is shown as the following:
+
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+The numbers after the direction are steps.
+ Please write a program to compute the distance from current position after a sequence of
+ movement and original point. If the distance is a float, then just print the nearest integer. 
+ Example: If the following tuples are given as input to the program:
+
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+Then, the output of the program should be:
+
+2'''
+# class Game:
+#     x_axis=[]
+#     y_axis=[]
+#     x_locatiopn=0
+#     y_location=0
+#     def start(self):
+#         command=tuple(input('input direction followed by number of steps:\n').split(' '))
+#         self.calc_distance(command)
+#         self.x_location=sum(self.x_axis)
+#         self.y_location=sum(self.y_axis)
+#
+#         return math.sqrt(pow(self.x_location,2)+pow(self.y_location,2))
+#
+#     def calc_distance(self,command):
+#         if command[0].upper()=='UP':
+#             self.y_axis.append(int(command[1]))
+#         if command[0].upper() == 'DOWN':
+#             self.y_axis.append(-int(command[1]))
+#
+#         if command[0].upper() == 'LEFT':
+#             self.x_axis.append(-int(command[1]))
+#         if command[0].upper() == 'RIGHT':
+#             self.x_axis.append(int(command[1]))
+#
+# game=Game()
+# while True:
+#     print(f'Distance = {game.start()}')
+#     print(f'Current Location x = {game.x_location}\ny= {game.y_location}')
+#
+
+'''Question 22
+Question:
+Write a program to compute the frequency of the words from the input.
+The output should output after sorting the key alphanumerically.
+
+Suppose the following input is supplied to the program:
+
+New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+Then, the output should be:
+
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1'''
+# import collections
+#
+# in_word=input('Input phrase').split(' ')
+# li_count=collections.Counter(in_word).items()
+# li_count=list(li_count)
+# print(li_count)
+# li_count.sort()
+# print(li_count)
+
+'''Question 23
+Question:
+Write a method which can calculate square value of number'''
+
+# def method1(num):
+#     return num**2
+# def method2(num):
+#     return pow(num,2)
+# def method3(num):
+#     return num*num
+
+
+
+'''Question 24
+Question:
+Python has many built-in functions, and if you do not know how to use it, 
+you can read document online or find some books. But Python has a built-in document function for every built-in functions.
+
+Please write a program to print some Python built-in functions documents, such as abs(), int(), raw_input()
+
+And add document for your own function
+
+Hints:'''
+
+# print(abs.__doc__)
+# print(int.__doc__)
+# print(input.__doc__)
+
+# def method3(num):
+#     '''Take a number and return square of this number'''
+#     return num*num
+# print(method3.__doc__)
+
+'''Question 25
+Question:
+Define a class, which have a class parameter and have a same instance parameter.
+Question 26
+Question:
+Define a function which can compute the sum of two numbers.
+Question 27
+Question:
+Define a function that can convert a integer into a string and print it in console.
+Question 28
+Question:
+Define a function that can receive two integer numbers in string form and compute their sum and then print it in console.
+Question 29
+Question:
+Define a function that can accept two strings as input and concatenate them and then print it in console.
+Question 30
+Question:
+Define a function that can accept two strings as input and print the string with maximum length in console.
+If two strings have the same length, then the function should print all strings line by line.
+Question 31
+Question:
+Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
+Question 32
+Question:
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. 
+The function should just print the keys only.
+Question 33
+Question:
+Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
+Question 34
+Question:
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). 
+Then the function needs to print the first 5 elements in the list.
+Question 35
+Question:
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+Then the function needs to print the last 5 elements in the list.
+Question 36
+Question:
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). 
+Then the function needs to print all values except the first 5 elements in the list.
+Question 37
+Question:
+Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included).
+
+Question 38
+Question:
+With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line.
+'''
+tuple1=(1,2,3,4,5,6,7,8,9,10)
+for idx,number in enumerate(tuple1):
+    if idx<(len(tuple1)//2):
+        print(number,end='')
+    elif idx==(len(tuple1)//2):
+        print(f'\n{number}',end='')
     else:
-        continue
-    print(sum(sum_list))
 
-
-
-
-
-
+        print(number,end='')
 
 
 
