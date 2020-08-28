@@ -63,3 +63,24 @@ a=(x for x in range(5))
 x=map(cal,a)
 for i in x:
     print(i)
+
+
+# convert binary to int/decimal, can also convert from hex/oct
+int('10100101',2)
+
+
+#all return True if all True
+all([True,True])
+True
+all([True,True,False])
+False
+
+#string methods
+a='asdasd 1231'
+a.isalpha()
+a.isascii()
+a.isdecimal()
+a.isdigit()
+a.islower()
+a.isupper()
+a.isnumerica()

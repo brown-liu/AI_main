@@ -187,7 +187,8 @@ PRACTICE MAKES PERFECT
 
 '''Question 10
 Question
-Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing
+all duplicate words and sorting them alphanumerically.
 
 Suppose the following input is supplied to the program:
 
@@ -196,3 +197,180 @@ Then, the output should be:
 
 again and hello makes perfect practice world
 '''
+# word_in=input("put all your words").split(' ')
+# new_li=[]
+# for word in word_in:
+#     if word in new_li:
+#         continue
+#     else:
+#         new_li.append(word)
+# new_li.sort()
+# print(*(w for w in new_li),sep='^')
+#
+'''Question 11
+Question
+Write a program which accepts a sequence of comma separated 4 digit binary numbers 
+as its input and then check whether they are divisible by 5 or not. 
+The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+
+Example:
+
+0100,0011,1010,1001
+Then the output should be:
+
+1010
+'''
+# def bin_dec(binary_):
+#     sum=0
+#     binary_=str(binary_)[::-1]
+#     for i in range(len(binary_)):
+#         str_bin=binary_[i]
+#         n= int(str_bin) * pow(2,i)
+#         sum+=n
+#     return sum
+
+# b_in = input('bring binary').split(',')
+#
+# li=[]
+# for b in b_in:
+#     # if bin_dec(b)%5 ==0:
+#     if int(b,2)%5==0:
+#         li.append(b)
+# print(li)
+
+'''Question 12
+Question:
+Write a program, which will find all such numbers between 1000 and 3000 (both included) such 
+that each digit of the number is an even number.The numbers obtained should be printed in a
+comma-separated sequence on a single line.'''
+
+# def even_num(in_num):
+#     for i in str(in_num):
+#         if int(i)%2!=0:
+#             return False
+#     return True
+#
+#
+# for num in range(1000,3001):
+#     if even_num(num):
+#         print(num,end=',')
+
+
+'''Question 13
+Question:
+Write a program that accepts a sentence and calculate the number of letters and digits.
+
+Suppose the following input is supplied to the program:
+
+hello world! 123
+Then, the output should be:
+
+LETTERS 10
+DIGITS 3'''
+
+# mix='hello world! 123'
+# letter_count=0
+# digit_count=0
+# for i in mix:
+#     if i.isalpha():
+#         letter_count+=1
+#     if i.isdigit():
+#         digit_count+=1
+#
+# print(f'LETTER {letter_count }\nDIGITS {digit_count}')
+
+
+'''Question 14
+Question:
+Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+Suppose the following input is supplied to the program:
+
+Hello world!
+Then, the output should be:
+
+UPPER CASE 1
+LOWER CASE 9'''
+#
+# a='Hello world!'
+# print(a[0].isupper(),a[3].islower())
+#
+
+
+'''Question 15
+Question:
+Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+
+Suppose the following input is supplied to the program:
+
+9
+Then, the output should be:
+
+11106'''
+
+# n=9
+#
+# result=9+99+999+9999
+# li=[]
+# sum=0
+#
+# for i in range(1,5):
+#     string = ''
+#     for j in range(i):
+#         string+=str(n)
+#         print(string)
+#     sum+=int(string)
+# print(sum)
+
+'''Question 16
+Question:
+Use a list comprehension to square each odd number in a list. 
+The list is input by a sequence of comma-separated numbers.
+>Suppose the following input is supplied to the program:
+
+1,2,3,4,5,6,7,8,9
+Then, the output should be:
+
+1,9,25,49,81'''
+# num_in=input('numbers').split(',')
+# print(*(int(i)*int(i) for i in num_in if int(i)%2==0),sep=',')
+#
+
+
+'''Question 17
+Question:
+Write a program that computes the net amount of a bank account based a transaction log from console input.
+The transaction log format is shown as following:
+D 100
+W 200
+D means deposit while W means withdrawal.
+Suppose the following input is supplied to the program:
+
+D 300
+D 300
+W 200
+D 100
+Then, the output should be:
+
+500'''
+while True:
+    command=input('enter').split(' ')
+    print(command)
+    sum_list=[]
+
+    if i=='D':
+        sum_list.append(int(command[i+1]))
+    if i=='W':
+        sum_list.append(int(-command[i+1]))
+    else:
+        continue
+    print(sum(sum_list))
+
+
+
+
+
+
+
+
+
