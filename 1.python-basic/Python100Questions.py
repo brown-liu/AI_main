@@ -647,3 +647,119 @@ Write a program which accepts a string as input to print "Yes" if the string is 
 #     if in_word.lower()=='yes':
 #         print("Yes")
 #     else:print('No')
+
+'''Question 41
+Question:
+Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].
+
+Hints:
+Question 42
+Question:
+Write a program which can map() and filter() to make a list whose elements are square of even number in [1,2,3,4,5,6,7,8,9,10].
+
+'''
+    # def square(x):
+    #     return pow(x,2)
+    # def even(x):
+    #     if x%2==0:
+    #         return x
+    # a=[1,2,3,4,5,6,7,8,9]
+    # li=map(lambda x:x>5,a)
+    # print('Using Map',li,type(li))
+    # li1=filter(lambda x:x>5,a)
+    # print('Using Filter',li1,type(li1))
+    # print(list(li),'-',list(li1))
+    #
+
+'''Question 43
+Question:
+Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+
+'''
+#
+# result=filter(lambda x: x%2!=0,range(1,21))
+# print(list(result))
+
+
+'''Question 44
+Question:
+Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).'''
+# print(list(map(lambda x:x**2,range(1,21))))
+
+'''Question 45
+Question:
+Define a class named American which has a static method called printNationality.
+Question 46
+Question:
+Define a class named American and its subclass NewYorker.
+'''
+# class American:
+#     def IsStupid(self):
+#         print("Not all American are stupid")
+# class NewYork(American):
+#     pass
+# nyc=NewYork()
+# nyc.IsStupid()
+
+
+'''Question 47
+Question
+Define a class named Circle which can be constructed by a radius. 
+The Circle class has a method which can compute the area.'''
+
+# class Circule:
+#     def __init__(self,radius):
+#         self.radius=radius
+#     def find_area(self):
+#         return math.pi*(self.radius*self.radius)
+# circule=Circule(10)
+# print(circule.find_area())
+
+
+'''Question 48
+Question
+Define a class named Rectangle which can be constructed by a length and width.   The Rectangle class has a method which can compute the area.
+Question 49
+Question
+Define a class named Shape and its subclass Square. 
+The Square class has an init function which takes a length as argument. 
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Question 50
+Question
+Please raise a RuntimeError exception.
+'''
+# raise RuntimeError('Allgood')
+
+'''Question 51
+Question
+Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+'''
+# try:
+#     x=5/0
+# except ZeroDivisionError as e:
+#     print(e)
+# finally:
+#     print('So stupid')
+
+
+'''Question 52
+Question
+Define a custom exception class which takes a string message as attribute.
+
+'''
+
+class Errors_1(Exception):
+    """My own exception class
+
+       Attributes:
+           msg  -- explanation of the error
+       """
+    def __init__(self,msg):
+        self.msg=msg
+
+try:
+    n=1/0
+
+except:
+    raise Errors_1('RHI ADAFASFASFA S')

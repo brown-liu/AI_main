@@ -59,10 +59,10 @@ def user_input():
 #map(function,iterable)
 def cal(x):
     return x+1111
-a=(x for x in range(5))
-x=map(cal,a)
-for i in x:
-    print(i)
+# a=(x for x in range(5))
+# x=map(cal,a)
+# for i in x:
+#     print(i)
 
 
 # convert binary to int/decimal, can also convert from hex/oct
@@ -70,10 +70,8 @@ int('10100101',2)
 
 
 #all return True if all True
-all([True,True])
-True
-all([True,True,False])
-False
+all([True,True])     #  ==> True
+all([True,True,False])# ==> False
 
 #string methods
 a='asdasd 1231'
@@ -83,14 +81,25 @@ a.isdecimal()
 a.isdigit()
 a.islower()
 a.isupper()
-a.isnumerica()
+a.isnumeric()
 
 # one example of using map and use many variable to receive multi args output
-in_word=input().split(' ')
-x,y =map(str,in_word)
+# in_word=input().split(' ')
+# x,y =map(str,in_word)
 
 
 #example of regular expression For password, A-Z a-z 0-9 include$#@
 import re
 
 ass_pattern = re.compile(r"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@]).{6,12}$")
+
+# max also have a key as function before comparision
+# Note, map may return True or False while Filter act based on the condition
+a=[1,2,3,5,6,7,9]
+#input must be a list or iterable
+li_map=map(lambda x:x>4,a)
+print(list(li_map))
+li_filter=filter(lambda x:x>4,a)
+print(list(li_filter))
+# ===> [False, False, False, True, True, True, True]
+# ===> [5, 6, 7, 9]
