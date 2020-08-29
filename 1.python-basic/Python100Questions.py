@@ -624,15 +624,26 @@ Question 38
 Question:
 With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line.
 '''
-tuple1=(1,2,3,4,5,6,7,8,9,10)
-for idx,number in enumerate(tuple1):
-    if idx<(len(tuple1)//2):
-        print(number,end='')
-    elif idx==(len(tuple1)//2):
-        print(f'\n{number}',end='')
-    else:
+# tuple1=(1,2,3,4,5,6,7,8,9,10)
+# for idx,number in enumerate(tuple1):
+#     if idx<(len(tuple1)//2):
+#         print(number,end='')
+#     elif idx==(len(tuple1)//2):
+#         print(f'\n{number}',end='')
+#     else:
+#
+#         print(number,end='')
 
-        print(number,end='')
 
-
-
+'''Question 39
+Question:
+Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
+Question 40
+Question:
+Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No".'''
+#
+# while True:
+#     in_word=input('yes?').strip()
+#     if in_word.lower()=='yes':
+#         print("Yes")
+#     else:print('No')
