@@ -748,18 +748,420 @@ Question
 Define a custom exception class which takes a string message as attribute.
 
 '''
+#
+# class Errors_1(Exception):
+#     """My own exception class
+#
+#        Attributes:
+#            msg  -- explanation of the error
+#        """
+#     def __init__(self,msg):
+#         self.msg=msg
+#
+# try:
+#     n=1/0
+#
+# except:
+#     raise Errors_1('RHI ADAFASFASFA S')
 
-class Errors_1(Exception):
-    """My own exception class
+'''Question 53
+Question
+Assuming that we have some email addresses in the "username@companyname.com" format, 
+please write program to print the user name of a given email address. 
+Both user names and company names are composed of letters only.
 
-       Attributes:
-           msg  -- explanation of the error
-       """
-    def __init__(self,msg):
-        self.msg=msg
+Example: If the following email address is given as input to the program:
 
-try:
-    n=1/0
+john@google.com
+Then, the output of the program should be:
 
-except:
-    raise Errors_1('RHI ADAFASFASFA S')
+john
+In case of input data being supplied to the question, it should be assumed to be a console input.
+
+# '''
+# import re
+# emai=input('Please enter email address')
+# pattern=re.compile(r'[a-zA-Z]*@')
+# name=re.match(pattern,emai)
+#
+# print(name.group()[:-1])
+
+# email=input('enter email addres: ').split('@')
+# print(email[0])
+#
+# import re
+#
+# email = "john@google.com elise@python.com"
+# pattern = "(\w+)@\w+.com"
+# ans = re.findall(pattern,email)
+# print(ans)
+#
+
+
+
+
+'''Question 54
+Question
+Assuming that we have some email addresses in the "username@companyname.com" format, 
+please write program to print the company name of a given email address. 
+Both user names and company names are composed of letters only.
+
+Example: If the following email address is given as input to the program:
+
+john@google.com
+Then, the output of the program should be:
+
+google
+In case of input data being supplied to the question, it should be assumed to be a console input.
+
+'''
+
+# email=input('EMAIL AADREES').split('@')
+# email=email[1].split('.')
+# email=email[0]
+# print(email)
+
+
+'''Question 55
+Question
+Write a program which accepts a sequence of words separated by 
+whitespace as input to print the words composed of digits only.
+
+Example: If the following words is given as input to the program:
+2 cats and 3 dogs.
+Then, the output of the program should be:
+
+['2', '3']'''
+
+# phrase=input('Enter phrase').split(' ')
+# li=[]
+# for i in phrase:
+#     if i.isdigit():
+#         li.append(i)
+#
+# print(li)
+# import re
+# phrase=input('Enter phrase')
+# pattern=re.compile('\d+')
+# string=re.findall(pattern,phrase)
+# print(string)
+
+
+'''Question 56
+Question
+Print a unicode string "hello world".'''
+# u=b'hello world'
+# print(u)
+
+
+'''Question 57
+Question
+Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
+
+'''
+# def AscII2unicode(ascII):
+#     result=''
+#     for i in ascII:
+#         result+=str(ord(i))
+#     return result
+#
+# print(AscII2unicode('abbc'))
+
+
+'''Question 58
+Question
+Write a special comment to indicate a Python source code file is in unicode.
+Question 59
+Question
+Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).
+
+Example: If the following n is given as input to the program:
+
+5
+Then, the output of the program should be:
+
+3.55'''
+# def iter_divide(n):
+#     a=1
+#     sum=0
+#     while a<=n:
+#         sum+=a/(a+1.0)
+#         a+=1
+#     return sum
+# print(round(iter_divide(5),2))
+
+
+'''Question 60
+Question
+Write a program to compute:
+
+f(n)=f(n-1)+100 when n>0
+and f(0)=0
+with a given n input by console (n>0).
+
+Example: If the following n is given as input to the program:
+5
+Then, the output of the program should be:
+500
+In case of input data being supplied to the question, it should be assumed to be a console input.
+'''
+
+# num=int(input('Number'))
+# def func(num):
+#     if num>0:
+#         return func(num-1)+100
+#     return 0
+# print(func(num))
+
+
+'''Question 61
+Question
+The Fibonacci Sequence is computed based on the following formula:
+
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program to compute the value of f(n) with a given n input by console.
+
+Example: If the following n is given as input to the program:
+
+7
+Then, the output of the program should be:
+
+13'''
+
+# def Fibonacci(n):
+#     if n==0:
+#         return 0
+#     elif n==1:
+#         return 1
+#     else:
+#         return Fibonacci(n-1)+Fibonacci(n-2)
+# print(Fibonacci(7))
+
+
+
+
+'''Question 62
+Question
+The Fibonacci Sequence is computed based on the following formula:
+
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program to compute the value of f(n) with a given n input by console.
+
+Example: If the following n is given as input to the program:
+
+7
+Then, the output of the program should be:
+
+0,1,1,2,3,5,8,13
+In case of input data being supplied to the question, it should be assumed to be a console input.'''
+
+# def Fibonacci(n):
+#     if n==0:
+#         return 0
+#
+#     elif n==1:
+#         return 1
+#
+#     else:
+#         return Fibonacci(n-1)+Fibonacci(n-2)
+# for i in range(8):
+#     print(Fibonacci(i))
+
+
+'''Question 63
+Question
+Please write a program using generator to print the even numbers between 0 and n in 
+comma separated form while n is input by console.
+
+Example: If the following n is given as input to the program:
+
+10
+Then, the output of the program should be:
+
+0,2,4,6,8,10'''
+# n=int(input('number'))
+# print(*(i for i in range(n+1) if i%2==0))
+
+# def Generator(n):
+#     for i in range(n+1):
+#         if i%2==0:
+#             yield i
+# x=Generator(10)
+# for i in range(3):
+#     print(next(x))
+
+'''Question 64
+Question
+Please write a program using generator to print the numbers
+which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+Example: If the following n is given as input to the program:
+100
+Then, the output of the program should be:
+
+0,35,70'''
+
+# def Generator(num):
+#     for n in range(num):
+#         if all([n%5==0, n%7==0]):
+#             print(n)
+# print(Generator(100))
+
+
+'''Question 65
+Question
+Please write assert statements to verify that every number in the list [2,4,6,8] is even.'''
+#
+# for i in [2,4,6,8]:
+#     assert i%2==0
+
+
+
+'''Question 66
+Question
+Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+Example: If the following n is given as input to the program:
+
+35 + 3
+Then, the output of the program should be:
+38'''
+
+# calc=input('enter calculation')
+# print(eval(calc))
+
+'''Question 67
+Question
+Please write a binary search function which searches an item in a sorted list. 
+The function should return the index of element to be searched in the list.
+
+'''
+# a=[1,4,5,6,7,8,9,10,12,15,19,20,22,23,26,27,29]
+# target=26
+# #index=4
+#
+# def binary_search(a,target):
+#     low=0
+#     hi=len(a)
+#     mid = (low + hi) // 2
+#     while a[mid]!=target:
+#         mid = (low + hi) // 2
+#         if a[mid]>target:
+#             hi=mid
+#         elif a[mid]==target:
+#             return mid
+#         else:
+#             low=mid
+#
+#
+# print(a.index(target))
+# print(binary_search(a,target))
+
+'''Question 68
+Question
+Please generate a random float where the value is between 10 and 100 using Python module.
+'''
+import random
+# for i in range(5):
+#     print(random.uniform(10,100))
+#     print(random.random()*100)
+
+
+'''Question 69
+Question
+Please generate a random float where the value is between 5 and 95 using Python module.
+Question 70
+Question
+Please write a program to output a random even number between 0 and 10 inclusive using random module and list comprehension.
+'''
+# a=[2,5,6,8,3,4,5,6,8,10,2,3,44,332,21]
+# li_even=[i for i in a if all([i %2==0,0<=i<=10])]
+# print(li_even)
+
+'''Question 71
+Question
+Please write a program to output a random number, which is divisible by 5 and 7, 
+between 10 and 150 inclusive using random module and list comprehension.'''
+
+
+# a=[i for i in range(10,151) if i%5==0 and i%7==0]
+# rand=random.sample(a,1)
+# choi=random.choice(a)
+# print(f'random.sample=>>{rand}\nrandom.choice==>>{choi}')
+
+
+
+'''Question 72
+Question
+Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.'''
+
+# a=[i for i in range(100,200)]
+# choice=random.sample(a,5)
+# print(choice)
+
+'''Question 73
+Question
+Please write a program to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
+Question 74
+Question
+Please write a program to randomly generate a list with 5 numbers, which are divisible by 5 and 7 , between 1 and 1000 inclusive.
+Question 75
+Question
+Please write a program to randomly print a integer number between 7 and 15 inclusive.
+Question 76
+Question
+Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".
+'''
+
+# s="hello world!hello world!hello world!hello world!"
+# b=bytes(s,'utf-8')
+# print(b)
+# import zlib
+# compressed=zlib.compress(b)
+# print(f'compressed {compressed}')
+# decompressed=zlib.decompress(compressed)
+# print(f'decompressed={decompressed}')
+
+'''Question 77
+Question
+Please write a program to print the running time of execution of "1+1" for 100 times.
+Question 78
+Question
+Please write a program to shuffle and print the list [3,6,7,8].'''
+
+
+# x=[1,2,3,4,5,6,7,8]
+# random.shuffle(x)
+# print(x)
+
+'''Question 79
+Question
+Please write a program to generate all sentences where subject is in ["I", "You"]
+and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+'''
+a=["I", "You"]
+b=["Play", "Love"]
+c=["Hockey","Football"]
+
+# for i in a:
+#     for j in b:
+#         for k in c:
+#             print(f'{i} {j} {k}')
+
+# import itertools
+# x=itertools.product(a,b,c)
+# for i in x:
+#     print(i)
+
+
+'''Question 80
+Question
+Please write a program to print the list after removing even numbers in [5,6,77,45,22,12,24].
+
+ '''
+# a=[5,6,77,45,22,12,24]
+# print([i for i in a if i %2!=0])
+
+

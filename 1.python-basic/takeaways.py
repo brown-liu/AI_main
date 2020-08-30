@@ -103,3 +103,39 @@ li_filter=filter(lambda x:x>4,a)
 print(list(li_filter))
 # ===> [False, False, False, True, True, True, True]
 # ===> [5, 6, 7, 9]
+
+
+#eval
+# >>>x = 7
+# >>> eval( '3 * x' )
+# 21
+# >>> eval('pow(2,2)')
+# 4
+# >>> eval('2 + 2')
+# 4
+# >>> n=81
+# >>> eval("n + 4")
+# 85
+
+
+# random.random() give 0-1 float, random.uniform(start,end)
+K=10
+import random
+random.random()
+random.uniform(10,100)
+random.sample(a,K) # to obtain K samples, the sample will not repeat, next sample will never be the same as current sample
+random.choice()  # random choose one, next choice might be same as current choice
+random.randrange(10,20)  # random choose one from the range
+random.shuffle(a) # shuffle in line, return NONE
+
+# import zlib as compression lib
+import zlib
+s="""K=10random.randrange(10,20)  # random choose one from the range"""
+b=bytes(s,'utf-8')
+print(b)
+compressed=zlib.compress(b)
+print(f'compressed {compressed}')
+decompressed=zlib.decompress(compressed)
+print(f'decompressed={decompressed}')
+
+# itertools.product(a,b,c), make a generator/iterator which can provide the product of a and b and c
