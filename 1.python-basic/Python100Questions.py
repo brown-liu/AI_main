@@ -1326,9 +1326,7 @@ Then, the output of the program should be:
 '''Question 96
 Question
 You are given a string S and width W. Your task is to wrap the string into a paragraph of width.
-
 If the following string is given as input to the program:
-
 ABCDEFGHIJKLIMNOQRSTUVWXYZ
 4
 Then, the output of the program should be:
@@ -1342,7 +1340,41 @@ UVWX
 YZ'''
 from textwrap import wrap
 string='ABCDEFGHIJKLIMNOQRSTUVWXYZ'
-print(string,4)
+# print(string,4)
+
+
+
+
+'''Question 97
+Question
+You are given an integer, N. Your task is to print an alphabet rangoli of size N. 
+(Rangoli is a form of Indian folk art based on creation of patterns.)
+Different sizes of alphabet rangoli are shown below:
+#size 3
+----c----
+--c-b-c--
+c-b-a-b-c
+--c-b-c--
+----c----
+
+#size 5
+
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+--e-d-c-b-c-d-e--
+----e-d-c-d-e----
+------e-d-e------
+--------e--------'''
+
+import string
+
+def print_rangoli(size):
+    n=size
+    alph=string.ascii_lowercase
+    width=4*n*3
 
 
 
