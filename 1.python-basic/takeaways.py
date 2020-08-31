@@ -151,3 +151,9 @@ itertools.permutations(d)
 # list compehension
 nd_array=[[[0 for a in range(3)] for b in range(5)] for c in range(8)]
 # (any can be i or can be anything,even a list) for item(or any name) in range(x)
+
+# wrap
+from textwrap import wrap
+wrap('string',len('lengthperline'))
+
+
