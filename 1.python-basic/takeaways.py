@@ -98,6 +98,7 @@ ass_pattern = re.compile(r"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@]).{6,12}$
 a=[1,2,3,5,6,7,9]
 #input must be a list or iterable
 li_map=map(lambda x:x>4,a)
+li_map=map(int,input("Enter number"))
 print(list(li_map))
 li_filter=filter(lambda x:x>4,a)
 print(list(li_filter))
@@ -139,3 +140,14 @@ decompressed=zlib.decompress(compressed)
 print(f'decompressed={decompressed}')
 
 # itertools.product(a,b,c), make a generator/iterator which can provide the product of a and b and c
+import itertools
+a=[1,2,3]
+b=[7,8,9]
+c=[0,0,0]
+d=[2,6,8]
+itertools.product(a,b,c)
+itertools.permutations(d)
+
+# list compehension
+nd_array=[[[0 for a in range(3)] for b in range(5)] for c in range(8)]
+# (any can be i or can be anything,even a list) for item(or any name) in range(x)

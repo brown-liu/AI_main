@@ -1164,4 +1164,169 @@ Please write a program to print the list after removing even numbers in [5,6,77,
 # a=[5,6,77,45,22,12,24]
 # print([i for i in a if i %2!=0])
 
+'''Question 81
+Question
+By using list comprehension, please write a program to print the list after removing numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
+
+'''
+# list1=[12,24,35,70,88,120,155]
+# list2=[x for x in list1 if x%5==0 and x%7==0]
+# for x in list2:
+#     print(x)
+
+
+'''Question 82
+Question
+By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].'''
+# list1=[12,24,35,70,88,120,155]
+# list2=[x for x in list1 if list1.index(x) not in [0,2,4,6]]
+# print(list2)
+# list2=[x for idx,x in enumerate(list1) if idx %2!=0]
+# print(list2)
+
+'''Question 83
+Question
+By using list comprehension, please write a program to print the list after removing the 2nd - 4th numbers in [12,24,35,70,88,120,155].
+Question 84
+Question
+By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.'''
+#
+# nd_array=[[[0 for a in range(3)] for b in range(5)] for c in range(8)]
+# print(nd_array)
+
+
+'''Question 85
+Question
+By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+Question 86
+Question
+By using list comprehension, please write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155].
+Question 87
+Question
+With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are intersection of the above given lists.
+'''
+# list1 = [1,3,6,78,35,55]
+# list2 = [12,24,35,24,88,120,155]
+#
+# li=set.intersection(set(list1),set(list2))
+
+
+'''Question 88
+Question
+With a given list [12,24,35,24,88,120,155,88,120,155], 
+write a program to print this list after removing all duplicate values with original order reserved.
+'''
+a=[12,24,35,24,88,120,155,88,120,155]
+# print(sorted(set(a),reverse=True))
+
+'''Question 89
+Question
+Define a class Person and its two child classes: 
+Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+Question 90
+Question
+Please write a program which count and print the numbers of each character in a string input by console.
+Example: If the following string is given as input to the program:
+
+abcdefgabc
+Then, the output of the program should be:
+
+a,2
+c,2
+b,2
+e,1
+d,1
+g,1
+f,1'''
+# from collections import Counter
+# def convert(string):
+#     print(Counter(string).items())
+#
+# convert('abcdefgabc')
+
+
+'''Question 91
+Question
+Please write a program which accepts a string from console and print it in reverse order.
+
+Example: If the following string is given as input to the program:*
+
+rise to vote sir
+Then, the output of the program should be:
+
+ris etov ot esir'''
+
+# a='abcdefg'
+# print(a[::-1])
+# print(''.join(reversed(a)))
+
+
+'''Question 92
+Question
+Please write a program which accepts a string from console and print the characters that have even indexes.
+
+Example: If the following string is given as input to the program:
+
+H1e2l3l4o5w6o7r8l9d
+Then, the output of the program should be:
+
+Helloworld'''
+
+# a='H1e2l3l4o5w6o7r8l9d'
+# b=''
+# for i in a:
+#     if i.isalpha():
+#         b+=i
+# print(b)
+
+
+'''Question 93
+Question
+Please write a program which prints all permutations of [1,2,3]
+'''
+# import itertools
+# a=[1,2,3]
+# # for i in itertools.product(a,a,a):
+# #     print(i)
+# print(list(itertools.permutations(a)))
+
+
+'''Question 94
+Question
+Write a program to solve a classic ancient Chinese puzzle: We count 35 heads and 94 
+legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?
+'''
+
+# for rabit in range(35):
+#     if rabit*4+(35-rabit)*2==94:
+#         print(rabit)
+
+'''Question 95
+Question
+Given the participants' score sheet for your University Sports Day, 
+you are required to find the runner-up score. You are given scores. 
+Store them in a list and find the score of the runner-up.
+
+If the following string is given as input to the program:
+
+5
+2 3 6 6 5
+Then, the output of the program should be:
+
+5'''
+x=[2,3,6,6,6,5,5,4]
+def find_run_up(result):
+    for _ in range(result.count(max(result))):
+        result.remove(max(result))
+    for _ in range(result.count(max(result))) :
+        print(max(result))
+find_run_up(x)
+
+
+
+
+
+
+
+
 
