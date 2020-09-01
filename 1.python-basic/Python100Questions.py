@@ -1369,22 +1369,114 @@ e-d-c-b-a-b-c-d-e
 ------e-d-e------
 --------e--------'''
 
-import string
+# import string
+#
+# def print_rangoli(size):
+#     n=size
+#     alph=string.ascii_lowercase
+#     width=4*n*3
+#     ans=[]
+#     for i in range(n):
+#         right='-'.join(alph[n-i-1:n])
+#         mid=right[-1:0:-1] +right
+#         final=mid.center(width,'-')
+#         ans.append(final)
+#         print(final)
+#     ans.pop()
+#     for i in reversed(ans):
+#         final2=i.center(width,'-')
+#         print(final2)
+#
+# print_rangoli(3)
+# import string
+# def run(n):
+#     alpha=string.ascii_lowercase
+#     width=n*2+4
+#     answer=[]
+#     for idx in range(n):
+#         right=alpha[n-idx-1:n]
+#         mid= right[-1:0:-1] + right
+#         final=mid.center(width,'*')
+#         print(final)
+#
+# run(5)
 
-def print_rangoli(size):
-    n=size
-    alph=string.ascii_lowercase
-    width=4*n*3
+
+'''Question 98
+Question
+You are given a date. Your task is to find what the day is on that date.
+
+Input
+
+A single line of input containing the space separated month, day and year, respectively, in MM DD YYYY format.
+
+08 05 2015
+Output
+
+Output the correct day in capital letters.
+
+WEDNESDAY'''
+
+# import calendar
+#
+# year,month,day=map(int,input().split())
+# dayId=calendar.weekday(year,month,day)
+# print(calendar.day_name[dayId].upper())
 
 
+'''Question 99
+Question
+Given 2 sets of integers, M and N, print their symmetric difference in ascending order. 
+The term symmetric difference indicates those values that exist in either M or N but do not exist in both.
+
+Input
+
+The first line of input contains an integer, M.The second line contains M space-separated integers.
+The third line contains an integer, N.The fourth line contains N space-separated integers.
+
+4
+2 4 5 9
+4
+2 4 11 12
+Output
+
+Output the symmetric difference integers in ascending order, one per line.
+
+5
+9
+11
+12
+'''
+# if __name__ == '__main__':
+#     n = int(input())
+#     set1 = set(map(int,input().split()))
+#
+#     m = int(input())
+#     set2 = set(map(int, input().split()))
+#
+#     ans = list(set1 ^ set2)
+#     ans.sort()
+#     for i in ans:
+#         print(i)
 
 
+'''Question 100
+Question
+You are given words. Some words may repeat. For each word, output its number of occurrences. 
+The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
 
+If the following string is given as input to the program:
 
+4
+bcdef
+abcdefg
+bcde
+bcdef
+Then, the output of the program should be:
 
-
-
-
+3
+2 1 1
+'''
 
 
 

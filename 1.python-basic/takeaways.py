@@ -156,4 +156,17 @@ nd_array=[[[0 for a in range(3)] for b in range(5)] for c in range(8)]
 from textwrap import wrap
 wrap('string',len('lengthperline'))
 
+# use string.center(<length>,'replace Charactor')
+# a='brown'
+# >>> a.center(20,'*')
+# '*******brown********'
+
+# calinder
+
+# import calendar
+#
+# year,month,day=map(int,input().split())
+# dayId=calendar.weekday(year,month,day)
+# print(calendar.day_name[dayId].upper())
+
 
