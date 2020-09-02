@@ -1476,8 +1476,33 @@ Then, the output of the program should be:
 
 3
 2 1 1
+Question 101
+Question
+You are given a string.Your task is to count the frequency of letters of the string and print the letters in descending order of frequency.
+
+If the following string is given as input to the program:
+
+aabbbccde
+Then, the output of the program should be:
+
+b 3
+a 2
+c 2
+d 1
+e 1
 '''
 
+# string=','.join(input('input string'))
+# string=string.split(',')
+# dict1={}
+# for i in string:
+#     if i not in dict1.keys():
+#         dict1[i]=1
+#     else:
+#         dict1[i]+=1
+# print(dict1)
+# for i in dict1:
+#     print(i,dict1[i])
 
 
 
