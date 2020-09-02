@@ -169,4 +169,10 @@ wrap('string',len('lengthperline'))
 # dayId=calendar.weekday(year,month,day)
 # print(calendar.day_name[dayId].upper())
 
+a=1.232323232
+print(f'{a:0.2f}')
 
+
+import pickle
+pickle.load()
+pickle.dump()
