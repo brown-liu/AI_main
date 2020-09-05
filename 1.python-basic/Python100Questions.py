@@ -1505,13 +1505,42 @@ e 1
 #     print(i,dict1[i])
 
 
+'''Question 102
+Question
+Write a Python program that accepts a string and calculate the number of digits and letters.
+
+Input
+
+Hello321Bye360
+Output
+
+Digit - 6
+Letter - 8'''
+
+# word=input()
+# digit,alpha=0,0
+#
+# for char in word:
+#     digit+=char.isdigit()
+#     alpha+=char.isalpha()
+# print(f'digit{digit}')
+# print(f'alpha{alpha}')
 
 
+'''Question 103
+Question
+Given a number N.Find Sum of 1 to N Using Recursion
 
+Input
 
+5
+Output
 
-
-
-
-
-
+15'''
+# def add(num):
+#     if num>0:
+#         return num+add(num-1)
+#     else:
+#         return 0
+#
+# print(add(5))

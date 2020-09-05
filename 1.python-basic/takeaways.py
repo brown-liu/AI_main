@@ -48,12 +48,12 @@ word_out.sort(key=lambda x:(x[0],int(x[1]),int(x[2])))
 
 #yield can repeat, return only return once and stop
 
-def user_input():
-    while True:
-        s=input()
-        if not s:
-            return
-        yield s
+# def user_input():
+#     while True:
+#         s=input()
+#         if not s:
+#             return
+#         yield s
 
 
 #map(function,iterable)
@@ -98,7 +98,7 @@ ass_pattern = re.compile(r"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@]).{6,12}$
 a=[1,2,3,5,6,7,9]
 #input must be a list or iterable
 li_map=map(lambda x:x>4,a)
-li_map=map(int,input("Enter number"))
+# li_map=map(int,input("Enter number"))
 print(list(li_map))
 li_filter=filter(lambda x:x>4,a)
 print(list(li_filter))
@@ -176,3 +176,7 @@ print(f'{a:0.2f}')
 import pickle
 pickle.load()
 pickle.dump()
+
+#True False can also do operation
+x=True+True
+print(x)
