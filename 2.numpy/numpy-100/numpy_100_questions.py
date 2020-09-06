@@ -108,6 +108,26 @@ Parameters
 
 '''19. Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)'''
 
-z=np.zeros((8,8))
-z[1:2,:]=1
-print(z)
+
+# z=np.zeros((8,8))
+# z[1::2,1::2]=1
+# z[::2,::2]=1
+# # z[1::2,-1]=1
+# print(z)
+
+'''20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element?'''
+# array=np.array(range(6*7)).reshape((7,6))
+# print(array)
+# print(np.unravel_index(indices=[22,41,37],shape=(7,6)))
+
+'''[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]
+ [24 25 26 27 28 29]
+ [30 31 32 33 34 35]
+ [36 37 38 39 40 41]]
+(array([3, 6, 6], dtype=int64), array([4, 5, 1], dtype=int64))'''
+
+'''21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)'''
+
