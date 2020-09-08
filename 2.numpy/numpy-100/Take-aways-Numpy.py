@@ -90,3 +90,13 @@ print(A.flatten())
 
 ###############################################vstack((a,b)) hstack((a,b))
 
+## convert list/array to matrix
+A=np.array([1,2,3,4])
+print(A.shape)
+B=A[np.newaxis,:]
+print(B,B.shape)
+
+C=np.concatenate((A,B),axis=1)
+D=np.concatenate((A,B),axis=0)
+
+np.split(A,3)  #=>
