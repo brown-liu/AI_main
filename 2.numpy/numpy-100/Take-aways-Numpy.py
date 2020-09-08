@@ -100,3 +100,21 @@ C=np.concatenate((A,B),axis=1)
 D=np.concatenate((A,B),axis=0)
 
 np.split(A,3)  #=>
+
+print(np.vsplit(A,3)) # 等价于print(np.split(A,3,axis=0))
+print(np.hsplit(A,2)) # 等价于print(np.split(A,2,axis=1))
+
+# use .copy to copy value, = is poinitng at same memory address
+np.bincount(a)
+# b=np.array([0,4,5,5,5,7,9,10])
+# np.bincount(b)
+# Out[24]: array([1, 0, 0, 0, 1, 3, 0, 1, 0, 1, 1], dtype=int64)
+
+np.round([1.1,2.2,3.3],0)
+
+# np.where(x==1)
+# Out[35]:
+# (array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=int64),
+#  array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=int64))
+
+
