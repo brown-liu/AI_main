@@ -111,10 +111,42 @@ np.bincount(a)
 # Out[24]: array([1, 0, 0, 0, 1, 3, 0, 1, 0, 1, 1], dtype=int64)
 
 np.round([1.1,2.2,3.3],0)
-
+x=np.array([1,2,3,4])
 # np.where(x==1)
 # Out[35]:
 # (array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=int64),
 #  array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=int64))
 
+
+# as type
+data=np.array([[1,1,1],[2,2,2]],dtype=int)
+data.dtype  # check data type
+data.astype(np.int64)
+
+
+# arr.swapaxes(1,0)
+
+# array([[1, 2, 3, 4],
+#        [5, 6, 7, 8]])
+# a.swapaxes(0,1)
+# Out[25]:
+# array([[1, 5],
+#        [2, 6],
+#        [3, 7],
+#        [4, 8]])
+
+# a.sort(0) 上下比 排序
+# a.sort(1) 左右比 排序
+
+
+#np.unique() = set()
+
+#seed( ) 用于指定随机数生成时所用算法开始的整数值，如果使用相同的seed( )值，
+# 则每次生成的随即数都相同，如果不设置这个值，则系统根据时间来自己选择这个值，此时每次生成的随机数因时间差异而不同。
+
+np.random.seed(1)
+np.random.rand(3,3)   #rand 后边 follow shape  (n,m,l)
+# create one array and copy it like laying tile
+a=np.array([[0,1],[1,0]])
+np.tile(a,(5,5))
 
