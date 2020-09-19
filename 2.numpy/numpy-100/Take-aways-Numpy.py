@@ -101,6 +101,14 @@ D=np.concatenate((A,B),axis=0)
 
 np.split(A,3)  #=>
 
+#diff work on the matrix it self, can do axis=0 or axis=1
+
+# >>> a=np.array([0.8,0.7,1.2])
+# >>> np.floor(a)
+# array([0., 0., 1.])
+# >>> np.ceil(a)
+# array([1., 1., 2.])
+
 print(np.vsplit(A,3)) # 等价于print(np.split(A,3,axis=0))
 print(np.hsplit(A,2)) # 等价于print(np.split(A,2,axis=1))
 
