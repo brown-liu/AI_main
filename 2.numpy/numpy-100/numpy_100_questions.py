@@ -5,12 +5,12 @@ import numpy as np
 3. Create a null vector of size 10 (★☆☆)
 4. How to find the memory size of any array (★☆☆)
 '''
-# print(np.__version__)
-# print(np.__config__)
+print(np.__version__)
+print(np.__config__)
 # print(np.show_config())
-# vector_10=np.zeros(10)
-# print(vector_10,vector_10.size * vector_10.itemsize )
-# print(f'size of each item in array is {vector_10.itemsize} bytes')
+vector_10=np.zeros(10)
+print(vector_10,vector_10.size * vector_10.itemsize )
+print(f'size of each item in array is {vector_10.itemsize} bytes')
 
 '''
 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
@@ -19,24 +19,24 @@ import numpy as np
 9. Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)
 10. Find indices of non-zero elements from [1,2,0,0,4,0] (★☆☆)
 '''
-# array=np.zeros(10)
-# array[4]=1
-# print(array)
-#
-# array=np.arange(10,49)
-# print(array,len(array))
-#
-# array=np.arange(1,10)
-# print(array[::-1])
-# array=np.arange(9,0,-1)
-# print(array)
-#
-# array_3x3=np.arange(9).reshape((3,3))
-# print(array_3x3)
-#
-# a=[1,2,0,0,4,0]
-# zero=np.nonzero(a)
-# print(zero)
+array=np.zeros(10)
+array[4]=1
+print(array)
+
+array=np.arange(10,49)
+print(array,len(array))
+
+array=np.arange(1,10)
+print(array[::-1])
+array=np.arange(9,0,-1)
+print(array)
+
+array_3x3=np.arange(9).reshape((3,3))
+print(array_3x3)
+
+a=[1,2,0,0,4,0]
+zero=np.nonzero(a)
+print(zero)
 
 '''
 11. Create a 3x3 identity matrix (★☆☆)
@@ -131,3 +131,52 @@ Parameters
 
 '''21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)'''
 
+# sum(iterable,startwith)   sum(range(5),-1) =>> 0+1+2+3+4 + -1 = 9
+#different between python sum and numpy sum
+import numpy as np
+a=np.sum(range(5),-1)
+b=sum(range(5),-1)
+print(f"np.sum(iterator,axis can only be axis number ==>a=np.sum(range(5),-1) ==>){a}")
+print("standard sum(iterator,startfrom) ===>",b)
+print("\n HOw to print yesterday and tomorrow date?\n")
+yesterday = np.datetime64('today','D') - np.timedelta64(1,'D')
+print(f"np.datetime64(1,'D')===>{np.datetime64(1,'D')}")
+print(f"np.timedelta64(1,'D')",np.timedelta64(1,'D'))
+print(f"yesterday = np.datetime64('today','D') -np.datetime64(1,'D')=>>>",yesterday)
+print(f"tomorrow = np.datetime64('today','D')==>{np.datetime64('today','D')}")
+# print(f"tomorrow =np.datetime64('today','d') + np.timedelta64(1,'d')",np.datetime64('today','D')+np.timedelta(1,'D'))
+print("*".center(40,"*"))
+print("print all date in that month")
+dates=np.arange('2016-07','2016-09',dtype='datetime64[D]')
+print(dates)
+print("*".center(40,"*"))
+a=np.ones(3)
+b=np.random.randn(3)
+c=np.zeros(3)
+print(a,'\n',b,"\n",c,"\n")
+print(f"This is inplace a+b =>> {np.add(a,b,out=b)}")   # out = b means the new value will overwrite b
+print(f"This is inplace a*b =>> {np.multiply(a,b,out=b)}")
+print(f'This is inplace subtract =>>> {np.subtract(a,c,out=b)}')
+print(f'This is inplace divide ===> {np.divide(a,b,out=b) }')
+print(f"a{a}")
+print(f"{b}")
+##get a random array
+print(np.random.randn(2,2))
+random_array = np.random.uniform(0,10,10)
+print(random_array)
+print(np.floor(random_array))
+print(np.ceil(random_array)-1)
+print(random_array.astype(int))
+print(np.trunc(random_array))
+
+print("*".center(50,"V"))
+#create a 5x5 matrix and add vector so it apply to all lines
+a=np.zeros((5,5))
+b=np.arange(0,5)
+print(a+b)
+
+def gntr():
+    for x in range(10):
+        yield x
+x=np.fromiter(gntr(),dtype=float,count=-1)
+print(x)
