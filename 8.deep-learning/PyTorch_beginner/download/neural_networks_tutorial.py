@@ -10,7 +10,7 @@ Now that you had a glimpse of ``autograd``, ``nn`` depends on
 An ``nn.Module`` contains layers, and a method ``forward(input)``\ that
 returns the ``output``.
 
-For example, look at this network that classifies digit images:
+For example, look at this network that classifies digit 10.algorithem_and_rules:
 
 .. figure:: /_static/img/mnist.png
    :alt: convnet
@@ -92,7 +92,7 @@ print(params[0].size())  # conv1's .weight
 ########################################################################
 # Let try a random 32x32 input
 # Note: Expected input size to this net(LeNet) is 32x32. To use this net on
-# MNIST dataset, please resize the images from the dataset to 32x32.
+# MNIST dataset, please resize the 10.algorithem_and_rules from the dataset to 32x32.
 
 input = torch.randn(1, 1, 32, 32)
 out = net(input)

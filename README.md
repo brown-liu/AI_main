@@ -39,8 +39,8 @@
 
 ## 关于作者
 
-微信公众号：机器学习初学者 ![gongzhong](images/gongzhong.jpg)
-知识星球：黄博的机器学习圈子![xingqiu](images/zhishixingqiu1.jpg)
+微信公众号：机器学习初学者 ![gongzhong](10.algorithem_and_rules/gongzhong.jpg)
+知识星球：黄博的机器学习圈子![xingqiu](10.algorithem_and_rules/zhishixingqiu1.jpg)
 
 [我的知乎](https://www.zhihu.com/people/fengdu78/activities)
 
